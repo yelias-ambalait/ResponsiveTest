@@ -1,16 +1,15 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 
 public class ResponsiveTest {
     private WebDriver driver;
@@ -24,9 +23,11 @@ public class ResponsiveTest {
     }
 
     @Test
-    public void testResponsiveDesign() throws InterruptedException {
+    public void testResponsiveDesign() throws InterruptedException, IOException {
+
+
         // Navigate to your webpage
-        driver.get("E:/Yelias/Projects/responsiveness/index.html");
+        driver.get("E:/Projects/ResponsiveTest/src/main/responsiveWebsite/index.html");  //Please change the path according to the index.html file in your local device
 
         // Test on desktop (default size)
         performResponsiveTest("Desktop", 1200, 800);
